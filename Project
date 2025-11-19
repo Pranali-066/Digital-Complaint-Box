@@ -1,1 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Digital Complaint Box</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Digital Complaint Box - Admin Dashboard</div>
+            <div>
+                <a href="index.html" class="back-btn">Back to Home</a>
+                <a href="/logout" class="back-btn" style="margin-left: 1rem;">Logout</a>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="dashboard">
+            <!-- Stats Cards -->
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <div class="stat-number" id="totalComplaints">TOTAL_COMPLAINTS</div>
+                    <div class="stat-label">Total Complaints</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="pendingCount" style="color: #ffd700;">PENDING_COUNT</div>
+                    <div class="stat-label">Pending</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="inProgressCount" style="color: #00bfff;">IN_PROGRESS_COUNT</div>
+                    <div class="stat-label">In Progress</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="resolvedCount" style="color: #00ff88;">RESOLVED_COUNT</div>
+                    <div class="stat-label">Resolved</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="totalUsers" style="color: #ff6b6b;">TOTAL_USERS</div>
+                    <div class="stat-label">Total Users</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Complaints Table -->
+        <div class="chart-container" style="margin-top: 2rem;">
+            <h3>All Complaints</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Category</th>
+                        <th>Complaint Text</th>
+                        <th>Submitted At</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="complaintsTable">
+<!-- COMPLAINTS_ROWS -->
+                </tbody>
+            </table>
+        </div>
 
+        <!-- Users Table -->
+        <div class="chart-container" style="margin-top: 2rem;">
+            <h3>All Users</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Username</th>
+                        <th>Complaint Submitted</th>
+                    </tr>
+                </thead>
+                <tbody id="usersTable">
+<!-- USERS_ROWS -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    
+</body>
+</html>
